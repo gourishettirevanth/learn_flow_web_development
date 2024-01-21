@@ -1,0 +1,42 @@
+//---------------------------------------------------- Typography
+// Font family - ff
+$ff-poppins: "Poppins", sans-serif;
+$ff-inter: "Inter", sans-serif;
+
+// Font-weight - fw
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+
+//---------------------------------------------------- Color library
+$color-primary-black: #000000;
+
+$color-secondary-blue: #377dff;
+$color-secondary-green: #38cb89;
+$color-secondary-orange: #ffab00;
+$color-secondary-red: #ff5630;
+
+$color-neutral-gray-1: #fefefe;
+$color-neutral-gray-2: #f3f5f7;
+$color-neutral-gray-3: #e8ecef;
+$color-neutral-gray-4: #6c7275;
+$color-neutral-gray-5: #343839;
+$color-neutral-gray-6: #343839;
+$color-neutral-gray-7: #141718;
+
+$color-gradient-1: linear-gradient(
+    0deg,
+    rgba(255, 171, 0, 0.64) 0%,
+    rgba(255, 171, 0, 0.64) 100%
+  ),
+  #fff;
+
+$color-gradient-2: linear-gradient(
+    0deg,
+    rgba(255, 171, 0, 0.4) 0%,
+    rgba(255, 171, 0, 0.4) 100%
+  ),
+  #fff;
+
+$color-headline: #121212;

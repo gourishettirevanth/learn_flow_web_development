@@ -1,0 +1,293 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__left {
+  @include flex-row-center();
+  gap: 0.4rem;
+}
+
+.nav__btn {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nav__logo {
+  @include logo();
+  font-size: 1.6rem;
+}
+
+.nav__cart img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nav__cart span {
+  color: $color-secondary-orange;
+}
+
+.nav__user,
+.nav__desktop-form,
+.nav__search-icon {
+  display: none;
+}
+
+//---------------------------------------------------- Navigation menu mobile
+
+.nav__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: #fff;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.nav__menu.open {
+  right: 0;
+  min-height: 81.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2.4rem;
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__btn--close svg path {
+  fill: $color-neutral-gray-4;
+}
+
+.nav__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__search-box {
+  display: flex;
+
+  width: 100%;
+  height: 4.6rem;
+
+  border: 0.1rem solid $color-neutral-gray-4;
+  border-radius: 0.6rem;
+
+  background: transparent url(../assets/icons/search\ 02.svg) no-repeat 1.6rem
+    center;
+
+  padding: 0 1.6rem 0 4.8rem;
+}
+
+.nav__search-box::placeholder {
+  @include text-14($fw-regular);
+  font-family: $ff-inter;
+  color: $color-neutral-gray-4;
+}
+
+.nav__search-box:enabled {
+  @include text-14($fw-regular);
+  font-family: $ff-inter;
+  color: $color-neutral-gray-7;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nav__item {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid $color-neutral-gray-3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.nav__arrow {
+  transition: all 0.3s;
+  justify-self: flex-end;
+}
+
+.nav__link {
+  @include btn-xs();
+  color: $color-neutral-gray-7;
+  justify-self: flex-start;
+}
+
+.nav__drop-down {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  padding-left: 0.8rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.nav__drop-down.open {
+  padding-top: 1.6rem;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+}
+
+.nav__arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.nav__drop-down a {
+  @include btn-xs();
+  color: $color-neutral-gray-4;
+}
+
+.nav__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 21rem;
+  gap: 0.8rem;
+}
+
+.nav__detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid $color-neutral-gray-3;
+}
+
+.nav__detail p {
+  @include btn-medium();
+  color: $color-neutral-gray-4;
+}
+
+.nav__detail button img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nav__detail button span {
+  color: #fff;
+}
+
+.nav__bottom > button {
+  @include btn-medium();
+  padding: 1rem 2.6rem;
+}
+
+.nav__social {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.nav__social li {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+//---------------------------------------------------- Responsive: width > 768
+@media only screen and (min-width: 768px) {
+  .nav__menu {
+    position: relative;
+
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+
+  .nav__logo {
+    font-size: 2.4rem;
+  }
+
+  .nav__bottom,
+  .nav__btn--hamburger,
+  .nav__header,
+  .nav__search-box,
+  .nav__drop-down {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .nav__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    padding-bottom: 0;
+    cursor: pointer;
+    border: none;
+  }
+
+  .nav__arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .nav__right {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .nav__top {
+    display: block;
+  }
+
+  .nav__user {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__desktop-form.open {
+    display: block;
+  }
+
+  .nav__desktop-form input {
+    width: 6rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  .nav__search-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__drop-down.open {
+    position: absolute;
+    top: 2.4rem;
+    left: 0;
+    min-width: 31.2rem;
+
+    display: flex;
+
+    padding: 1.6rem;
+    background-color: #fff;
+    border-radius: 1.2rem;
+  }
+}

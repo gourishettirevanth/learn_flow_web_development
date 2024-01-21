@@ -1,0 +1,67 @@
+.brands {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  padding-top: 2.4rem;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.brands__list {
+  display: flex;
+  gap: 1.6rem;
+
+  transition: all 2s;
+  list-style: none;
+}
+
+.brands__logo {
+  width: 12rem;
+  height: 4rem;
+}
+
+.brands__arrowes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brands__arrowes button {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.brands__icon.active path {
+  fill: #000;
+}
+
+//---------------------------------------------------- Responsive: width > 864
+@media only screen and (min-width: 864px) {
+  .brands {
+    align-items: center;
+  }
+
+  .brands__arrowes {
+    display: none;
+  }
+}
+
+//---------------------------------------------------- Responsive: width > 1440
+
+@media only screen and (min-width: 1440px) {
+  .brands {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .brands__list {
+    gap: 2.4rem;
+  }
+
+  .brands__logo {
+    width: 16.7rem;
+    height: 6.4rem;
+  }
+}

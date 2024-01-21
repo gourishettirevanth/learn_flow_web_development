@@ -1,0 +1,60 @@
+//---------------------------------------------------- Reset some default style
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // 1rem = 16px
+  // 62.5% rem = 10px
+  // 1rem = 10px
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $ff-inter;
+  font-style: normal;
+}
+
+//---------------------------------------------------- Set heading default style
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-poppins;
+  font-weight: $fw-medium;
+  font-style: normal;
+}
+//---------------------------------------------------- Set anchor default style
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+//---------------------------------------------------- Set button default style
+button {
+  background: none;
+  border: none;
+  font-family: $ff-inter;
+  font-weight: $fw-medium;
+}
+
+//---------------------------------------------------- Set ul default style
+ul {
+  list-style: none;
+}
+
+//---------------------------------------------------- Set section default style
+section {
+  padding: 3.2rem;
+
+  @media only screen and (min-width: 1440px) {
+    padding: 16rem;
+  }
+}

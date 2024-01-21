@@ -1,0 +1,67 @@
+.btn {
+  display: inline-block;
+
+  text-align: center;
+  color: #fff;
+
+  background-color: $color-neutral-gray-7;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.btn--cart {
+  @include flex-row-center();
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn--number {
+  @include flex-row-center();
+
+  width: 2rem;
+  height: 2rem;
+
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1rem;
+
+  background-color: $color-primary-black;
+  border-radius: 50%;
+}
+
+.btn--wishlist {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
+
+  border-radius: 3.2rem;
+  background: #fff;
+  box-shadow: 0 0.8rem 1.6rem -0.8rem rgba(15, 15, 15, 0.12);
+  cursor: pointer;
+}
+
+.btn--collection {
+  position: relative;
+  width: 8.8rem;
+  height: 2.4rem;
+
+  padding-bottom: 0.4rem;
+  color: $color-headline;
+  border-bottom: 0.1rem solid $color-headline;
+}
+
+.btn--collection::after {
+  position: absolute;
+  content: url(../assets/icons/arrow-right.svg);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 1.6rem;
+  height: 1.6rem;
+}
